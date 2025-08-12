@@ -26,8 +26,8 @@ const Homeclients = () => {
             <a href="#"><img src={Logo5} alt="Logo5" /></a>
             <a href="#"><img src={Logo6} alt="Logo6" /></a>
             <a href="#"><img src={Logo7} alt="Logo7" /></a>
-           
         </div>
+        
     </div>
     
     

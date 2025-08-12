@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Homehero from './Homehero'
 import Homeclients from './Homeclients'
+import Homecommunity from './Homecommunity'
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
         <Homeclients/>
 
         {/* Community */}
-        <div>community</div>
+        <Homecommunity/>
     </div>
   )
 }
