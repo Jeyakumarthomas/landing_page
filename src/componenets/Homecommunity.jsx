@@ -5,7 +5,7 @@ import Icon3 from '../assets/communityIcons/Icon3.png'
 
 const Homecommunity = () => {
   return (
-    <div className='border-2 w-full flex flex-col gap-4'>
+    <div className='w-full flex flex-col gap-4 items-center'>
         
             {/* community Text */}
         <div className='flex flex-col items-center gap-2'>
@@ -14,13 +14,15 @@ const Homecommunity = () => {
         </div>
 
             {/* community frame */}
-        <div className='flex px-6 py-8 gap-2 justify-around'>
+
+            <div className='flex flex-col w-3/4'>
+                        <div className=' flex px-6 py-8 gap-2 justify-around'>
 
             {/* 1 */}
             <div className='w-[299px] h-[260px] flex flex-col gap-4 items-center '>
                <div className='flex flex-col items-center justify-around w-[267px] h-36'>
                 <a href=""><img src={Icon1} alt="communityIcons" /></a>
-                <div className='text-center'>Membership Organisations</div>
+                <div className='text-center font-bold leading-9 text-[28px] text-grayHead'>Membership Organisations</div>
                </div>
                 <div className='font-normal text-sm leading-5 text-center w-[251px] text-grayPara'>Our membership management software provides full automation of membership renewals and payments</div>
             </div>
@@ -29,7 +31,7 @@ const Homecommunity = () => {
             <div className='w-[299px] h-[260px] flex flex-col gap-4 items-center '>
                <div className='flex flex-col items-center justify-around w-[267px] h-36'>
                 <a href=""><img src={Icon2} alt="communityIcons" /></a>
-                <div className='text-center'>National Associations</div>
+                <div className='text-center font-bold leading-9 text-[28px] text-grayHead'>National Associations</div>
                </div>
                 <div className='font-normal text-sm leading-5 text-center w-[240px] text-grayPara'>Our membership management software provides full automation of membership renewals and payments</div>
             </div>
@@ -38,11 +40,14 @@ const Homecommunity = () => {
             <div className='w-[299px] h-[260px] flex flex-col gap-4 items-center '>
                <div className='flex flex-col items-center justify-around w-[267px] h-36'>
                 <a href=""><img src={Icon3} alt="communityIcons" /></a>
-                <div className='text-center'>Clubs And Groups</div>
+                <div className='text-center font-bold leading-9 text-[28px] text-grayHead'>Clubs And Groups</div>
                </div>
                 <div className='font-normal text-sm leading-5 text-center w-[251px] text-grayPara'>Our membership management software provides full automation of membership renewals and payments</div>
             </div>
         </div>
+            </div>
+            
+
     </div>
   )
 }

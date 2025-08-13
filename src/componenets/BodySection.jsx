@@ -3,10 +3,11 @@ import Unlock from '../componenets/bodyComponents/Unlock.jsx'
 import Achievements from '../componenets/bodyComponents/Achievements.jsx'
 import Calender from '../componenets/bodyComponents/Calender.jsx'
 import Customers from './bodyComponents/Customers.jsx'
+import CommunityUpdates from './bodyComponents/CommunityUpdates.jsx'
 
 const BodySection = () => {
   return (
-    <div className='border-2 flex flex-col gap-12 overflow-y-auto'>
+    <div className=' flex flex-col gap-12 overflow-y-auto'>
       
           <Unlock/>
         
@@ -15,7 +16,8 @@ const BodySection = () => {
           <Calender/>
 
           <Customers/>
-        <div className=''>community update</div>
+
+          <CommunityUpdates/>
     </div>
   )
 }

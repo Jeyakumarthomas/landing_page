@@ -10,12 +10,16 @@ import Logo6 from '../../assets/clientsLogos/Logo6.png'
 
 const Customers = () => {
   return (
+    
     <div className=' w-full py-8 px-11 flex gap-[78px] bg-silver'>
+
+        {/* Left Side */}
         <div className=' w-1/3 flex justify-end '>
             <img src={Tesla} alt="" className=' '/>
         </div>
-        <div className='w-2/3 min-h-[324px] flex flex-col items-start gap-8'>
-        
+
+        {/* Right Side */}
+        <div className='w-2/3 min-h-[324px] flex flex-col items-center gap-8'>
             <div className=' w-[748px]  flex flex-col gap-4'>
                 <p className=''>Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
                 <div className=' w-[748px] min-h-[60px] flex flex-col'>
