@@ -6,7 +6,7 @@ import Img4 from '../../assets/bodySectionPNGs/Vector4.png'
 
 const Achievements = () => {
   return (
-    <div className='border-2 flex justify-between items-center bg-silver px-16 py-36'>
+    <div className='border-2 flex justify-around items-center bg-silver px-16 py-36'>
        
        {/* Left side */}
         <div className= ' w-[540px] flex flex-col gap-2'>

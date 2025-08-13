@@ -2,6 +2,7 @@ import React from 'react'
 import Unlock from '../componenets/bodyComponents/Unlock.jsx'
 import Achievements from '../componenets/bodyComponents/Achievements.jsx'
 import Calender from '../componenets/bodyComponents/Calender.jsx'
+import Customers from './bodyComponents/Customers.jsx'
 
 const BodySection = () => {
   return (
@@ -12,7 +13,8 @@ const BodySection = () => {
           <Achievements/>
        
           <Calender/>
-        <div className=''>customer's</div>
+
+          <Customers/>
         <div className=''>community update</div>
     </div>
   )
