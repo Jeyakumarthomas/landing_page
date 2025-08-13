@@ -1,5 +1,6 @@
 import React from 'react'
 import Unlock from '../componenets/bodyComponents/Unlock.jsx'
+import Achievements from '../componenets/bodyComponents/Achievements.jsx'
 
 const BodySection = () => {
   return (
@@ -7,7 +8,8 @@ const BodySection = () => {
       
           <Unlock/>
         
-        <div className=''>achievements</div>
+          <Achievements/>
+       
         <div className=''>calender</div>
         <div className=''>customer's</div>
         <div className=''>community update</div>
