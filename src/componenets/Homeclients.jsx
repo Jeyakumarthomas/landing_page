@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo1 from '../assets/clientsLogos/Logo1.png'
 import Logo2 from '../assets/clientsLogos/Logo2.png'
 import Logo3 from '../assets/clientsLogos/Logo3.png'
@@ -12,10 +11,12 @@ const Homeclients = () => {
     <div className='flex flex-col w-full gap-4'>
 
         {/* client text  */}
-        <div id="Service" className=' flex flex-col gap-2 items-center'>
-            <div className='text-grayHead font-semibold text-4xl '>Our Clients</div>
-            <div className='text-grayPara'>We have been working with some Fortune 500+ clients</div>
-            <div className='flex justify-between w-3/4 items-center mt-3'>
+        <div id="Service" className='p-5 flex flex-col gap-2 items-center'>
+            <div className='text-grayHead font-semibold text-3xl md:text-4xl '>Our Clients</div>
+            <div className='text-grayPara  text-sm md:text-base'>We have been working with some Fortune 500+ clients</div>
+            
+        {/* client logos */}
+            <div className='flex justify-between w-3/4 items-center  md:mt-3'>
               <a href="#"><img src={Logo1} alt="Logo1" /></a>
               <a href="#"><img src={Logo2} alt="Logo2" /></a>
               <a href="#"><img src={Logo3} alt="Logo3" /></a>
@@ -24,16 +25,8 @@ const Homeclients = () => {
               <a href="#"><img src={Logo6} alt="Logo6" /></a>
               <a href="#"><img src={Logo7} alt="Logo7" /></a>        
             </div>
-        </div>
-
-        {/* client logos */}
-       
-          
-        
-        
-    </div>
-    
-    
+        </div>   
+    </div>  
   )
 }
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import Img1 from '../../assets/bodySectionPNGs/Vector1.png'
 import Img2 from '../../assets/bodySectionPNGs/Vector2.png'
 import Img3 from '../../assets/bodySectionPNGs/Vector3.png'
@@ -6,19 +5,18 @@ import Img4 from '../../assets/bodySectionPNGs/Vector4.png'
 
 const Achievements = () => {
   return (
-    <div id='Product' className='w-full flex justify-around items-center bg-silver px-16 py-36'>
+
+    <section id='Product' className='w-full px-4 md:px-16 md:py-36 flex flex-col md:flex-row gap-10 md:gap-0 justify-around md:items-center bg-silver '>
        
-       {/* Left side */}
-       <div className=' w-1/2 flex justify-center'>
-            <div className= 'w-[540px] flex flex-col gap-2'>
-                <h2 className=' text-grayHead font-semibold text-4xl leading-11'>Helping a local<br/> <span className='text-primary'>business reinvent itself</span></h2>
-                <p className=' leading-6 font-normal text-grayClientBG'>We reached here with our hard work and dedication</p>
-            </div>
-       </div>
+       {/* Left */}
+        <div className='md:w-1/2 flex flex-col gap-2' >
+            <h2 className='font-semibold text-4xl text-grayHead leading-11'>Helping a local<br/> <span className='text-primary'>business reinvent itself</span></h2>
+            <p className=' font-normal text-grayClientBG leading-6'>We reached here with our hard work and dedication</p>
+        </div>
 
+        {/* Right */}
 
-        {/* Right Side */}
-        <div className='w-1/2 flex justify-center'>
+        <div className='md:w-1/2 flex justify-center'>
             <div className=' flex flex-col gap-10 justify-between'>
                 <div className=' flex gap-[30px] w-[540px] justify-between'>
                     <div className=' flex items-center gap-4 w-[225px]'>
@@ -62,7 +60,8 @@ const Achievements = () => {
                 </div>
             </div>
         </div>    
-    </div>
+    </section>
+
   )
 }
 

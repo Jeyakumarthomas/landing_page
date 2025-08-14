@@ -15,9 +15,9 @@ const BodySection = () => {
        
           <Calender/>
 
-          <Customers/>
+          {/* <Customers/>
 
-          <CommunityUpdates/>
+          <CommunityUpdates/> */}
     </div>
   )
 }
