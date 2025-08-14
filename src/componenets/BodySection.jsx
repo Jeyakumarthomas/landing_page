@@ -7,7 +7,7 @@ import CommunityUpdates from './bodyComponents/CommunityUpdates.jsx'
 
 const BodySection = () => {
   return (
-    <div className=' flex flex-col gap-12 overflow-y-auto'>
+    <div  className=' flex flex-col gap-12 overflow-y-auto'>
       
           <Unlock/>
         

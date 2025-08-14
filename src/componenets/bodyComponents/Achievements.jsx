@@ -6,7 +6,7 @@ import Img4 from '../../assets/bodySectionPNGs/Vector4.png'
 
 const Achievements = () => {
   return (
-    <div className='w-full flex justify-around items-center bg-silver px-16 py-36'>
+    <div id='Product' className='w-full flex justify-around items-center bg-silver px-16 py-36'>
        
        {/* Left side */}
        <div className=' w-1/2 flex justify-center'>

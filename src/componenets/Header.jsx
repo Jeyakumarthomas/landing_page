@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-scroll'
 import Logo from '../assets/Logo.png'
 import './Header.css'
 
 const Header = () => {
   return (
-        <header className='flex justify-around items-center text-black h-[84px] bg-white'>
+        <header className='flex justify-around items-center text-black h-[84px] bg-white sticky top-0 z-10'>
 
             {/* logo  */}
             <a href="#"> <img src={Logo} alt="" className='w-[155px] h-6'/></a>
@@ -12,12 +13,12 @@ const Header = () => {
             {/* group */}
             <div>
                 <ul className=' flex justify-between text-md h-[24px] w-[588px]'>
-                <li className="h-[24px]">Home</li>
-                <li className="h-[24px]">Service</li>
-                <li className="h-[24px]">Feature</li>
-                <li className="h-[24px]">Product</li>
-                <li className="h-[24px]">Testimonial</li>
-                <li className="h-[24px]">FAQ</li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="Home" smooth={true} duration={500}>Home</Link></li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="Service" smooth={true} duration={500}>Service</Link></li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="Feature" smooth={true} duration={500}>Feature</Link></li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="Product" smooth={true} duration={500}>Product</Link></li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="Testimonial" smooth={true} duration={500}>Testimonial</Link></li>
+                <li className="hover:text-gray-600 duration-300 cursor-pointer"><Link to="FAQ" smooth={true} duration={500}>FAQ</Link></li>
             </ul>
             </div>
 

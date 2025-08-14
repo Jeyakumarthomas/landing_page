@@ -3,7 +3,7 @@ import Frame1 from '../../assets/bodySectionPNGs/Frame1.png'
 
 const Unlock = () => {
   return (
-    <div className='w-full flex gap-8 justify-between overflow-y-auto px-36'>
+    <div id="Feature" className='w-full flex gap-8 justify-between overflow-y-auto px-36'>
 
         {/* left side */}
        <div className=' w-1/2 flex justify-center '>

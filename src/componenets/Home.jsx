@@ -6,7 +6,7 @@ import Homecommunity from './Homecommunity'
 
 const Home = () => {
   return (
-    <div className=' flex flex-col gap-10 justify-center items-center'>
+    <div className=' flex flex-col gap-10 justify-center items-center' id="Home">
 
         {/* Hero section */}
         <Homehero/>
