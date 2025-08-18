@@ -1,20 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
+@theme {
+  --color-silver: #f5f7fa;
 
+  --color-grayHead: #4d4d4d;
 
-@theme{
-    --color-silver : #F5F7FA 
-    
-}
+  --color-grayPara: #717171;
 
-@theme{
-    --color-grayHead : #4D4D4D
-}
-
-@theme{
-    --color-grayPara : #717171
-}
-
-@theme{
-    --color-grayClientBG : #18191F
+  --color-grayClientBG: #18191f;
 }

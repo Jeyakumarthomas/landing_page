@@ -1,23 +1,25 @@
-import React from 'react'
-import './Home.css'
-import Homehero from './Homehero'
-import Homeclients from './Homeclients'
-import Homecommunity from './Homecommunity'
+import React from "react";
+import "./Home.css";
+import Homehero from "./Homehero";
+import Homeclients from "./Homeclients";
+import Homecommunity from "./Homecommunity";
 
 const Home = () => {
   return (
-    <div className=' flex flex-col gap-10 justify-center items-center' id="Home">
+    <div
+      className="sm:p-10 flex flex-col gap-10 justify-center items-center"
+      id="Home"
+    >
+      {/* Hero section */}
+      <Homehero />
 
-        {/* Hero section */}
-        <Homehero/>
-        
-        {/* Clients */}
-        <Homeclients/>
+      {/* Clients */}
+      <Homeclients />
 
-        {/* Community */}
-        <Homecommunity/>
+      {/* Community */}
+      <Homecommunity />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
