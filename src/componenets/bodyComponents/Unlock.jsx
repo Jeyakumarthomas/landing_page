@@ -1,7 +1,17 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Frame1 from "../../assets/bodySectionPNGs/Frame1.png";
 
 const Unlock = () => {
+  const [posts, setPosts] = useState([]);
+
+  // ✅ Fetch posts from PHP API
+  useEffect(() => {
+    fetch("http://localhost/landingpage/bunlock.php")
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <section
       id="Feature"
@@ -14,17 +24,31 @@ const Unlock = () => {
       />
 
       <div className="my-auto max-sm:mx-auto p-2 md:m-2 md:w-3/4 lg:w-1/2 flex flex-col gap-2">
-        <h2 className="font-semibold text-xl sm:text-2xl md:text-4xl text-grayHead md:leading-11">
+        {/* <h2 className="font-semibold text-xl sm:text-2xl md:text-4xl text-grayHead md:leading-11">
           The unseen of spending three years at Pixelgrade
-        </h2>
-        <p className="max-sm:text-xs md:leading-5 font-normal text-grayPara">
+        </h2> */}
+        {posts.length === 0 ? (
+          <p>Enter a title and its desc...</p>
+        ) : (
+          <ul>
+            {posts.map((post) => (
+              <li key={post.id}>
+                {/* <h3>{post.title}</h3> */}
+                <h2 className="font-semibold text-xl sm:text-2xl md:text-4xl text-grayHead md:leading-11">{post.title}</h2>
+                {/* <p>{post.description}</p> */}
+                <p className="max-sm:text-xs md:leading-5 font-normal text-grayPara">{post.description}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* <p className="max-sm:text-xs md:leading-5 font-normal text-grayPara">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
           justo ipsum. Sed accumsan quam vitae est varius fringilla.
           Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
           tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
           Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
           elementum pulvinar odio.
-        </p>
+        </p> */}
         <button className="md:w-36 py-2.5 bg-primary text-white rounded-md ">
           Learn More
         </button>

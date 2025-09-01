@@ -1,9 +1,23 @@
+import { useEffect, useState } from "react";
+
 import Img1 from "../../assets/bodySectionPNGs/Vector1.png";
 import Img2 from "../../assets/bodySectionPNGs/Vector2.png";
 import Img3 from "../../assets/bodySectionPNGs/Vector3.png";
 import Img4 from "../../assets/bodySectionPNGs/Vector4.png";
 
 const Achievements = () => {
+
+  const [posts, setPosts] = useState([]);
+
+  // ✅ Fetch posts from PHP API
+  useEffect(() => {
+    fetch("http://localhost/landingpage/bachievements.php")
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((err) => console.error(err));
+  }, []);
+
+
   return (
     <section
       id="Product"
@@ -11,13 +25,27 @@ const Achievements = () => {
     >
       {/* Left */}
       <div className="w-full lg:w-1/2 flex flex-col lg:items-center gap-2">
-        <h2 className="font-semibold max-md:text-2xl md:text-4xl max-sm:text-center text-grayHead md:leading-11">
+        {/* <h2 className="font-semibold max-md:text-2xl md:text-4xl max-sm:text-center text-grayHead md:leading-11">
           Helping a local
           <br /> <span className="text-primary">business reinvent itself</span>
-        </h2>
-        <p className=" font-normal max-sm:text-center text-grayClientBG leading-6">
+        </h2> */}
+        {posts.length === 0 ? (
+        <p>Enter a title and its desc...</p>
+      ) : (
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              {/* <h3>{post.title}</h3> */}
+              <h3 className="font-semibold max-md:text-2xl md:text-4xl max-sm:text-center text-grayHead md:leading-11">{post.title}<br /> <span className="text-primary">{post.title1}</span></h3>
+              {/* <p>{post.description}</p> */}
+              <p className=" font-normal max-sm:text-center text-grayClientBG leading-6">{post.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+        {/* <p className=" font-normal max-sm:text-center text-grayClientBG leading-6">
           We reached here with our hard work and dedication
-        </p>
+        </p> */}
       </div>
 
       {/* Right */}

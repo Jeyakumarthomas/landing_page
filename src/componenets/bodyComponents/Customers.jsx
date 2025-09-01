@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect, useState } from "react";
+
 import Tesla from "../../assets/bodySectionPNGs/tesla.png";
 import Right from "../../assets/bodySectionPNGs/Right.png";
 import Logo1 from "../../assets/clientsLogos/Logo1.png";
@@ -9,6 +10,15 @@ import Logo5 from "../../assets/clientsLogos/Logo5.png";
 import Logo6 from "../../assets/clientsLogos/Logo6.png";
 
 const Customers = () => {
+  const [posts, setPosts] = useState([]);
+
+  // ✅ Fetch posts from PHP API
+  useEffect(() => {
+    fetch("http://localhost/landingpage/bcustomers.php")
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((err) => console.error(err));
+  }, []);
   return (
     // <div className='border-2 w-full py-8 md:px-10 flex flex-col md:flex-row gap-[78px] bg-silver'>
 
@@ -48,7 +58,7 @@ const Customers = () => {
       />
 
       <div className="my-auto p-2 sm:p-0 max-sm:mx-auto md:m-2 md:w-3/4 xl:min-h-96 flex flex-col gap-2 xl:gap-10">
-        <p className="text-grayPara font-normal max-sm:line-clamp-2 sm:line-clamp-3 lg:line-clamp-5">
+        {/* <p className="text-grayPara font-normal max-sm:line-clamp-2 sm:line-clamp-3 lg:line-clamp-5">
           Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis
           sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus.
           Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut
@@ -59,15 +69,32 @@ const Customers = () => {
           sapien, vitae placerat ante feugiat eget. Quisque vulputate odio
           neque, eget efficitur libero condimentum id. Curabitur id nibh id sem
           dignissim finibus ac sit amet magna.
-        </p>
-        <div className="">
-          <h4 className="font-semibold text-xl leading-7 text-primary flex items-center">
+        </p> */}
+              {posts.length === 0 ? (
+        <p>Enter a title and its desc...</p>
+      ) : (
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              {/* <h3>{post.paragraph}</h3> */}
+              <p className="text-grayPara font-normal max-sm:line-clamp-2 sm:line-clamp-3 lg:line-clamp-5">{post.paragraph}</p>
+              <div className="lg:mt-4 lg:space-y-3">
+              {/* <h3>{post.name}</h3> */}
+              <h4 className="font-semibold text-xl leading-7 text-primary flex items-center">{post.name}</h4>
+              {/* <p>{post.describtion}</p> */}
+              <p className="font-normal leading-6 flex items-center text-[#89939E]">{post.describtion}</p> 
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+          {/* <h4 className="font-semibold text-xl leading-7 text-primary flex items-center">
             Tim Smith
-          </h4>
-          <p className="font-normal leading-6 flex items-center text-[#89939E]">
+          </h4> */}
+          {/* <p className="font-normal leading-6 flex items-center text-[#89939E]">
             British Dragon Boat Racing Association
-          </p>
-        </div>
+          </p> */}
+        
         <div className="flex flex-col xl:flex-row items-center justify-between gap-2">
           <div className="w-full flex justify-between">
             <img src={Logo1} alt="Logos" className="h-12 w-12" />

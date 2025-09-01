@@ -8,21 +8,20 @@ import Send from "../../assets/footerSocialLinks/send1.png";
 
 const FooterMain = () => {
   return (
-    <div className="w-full py-8 md:py-12 xl:py-16 px-20 md:px-30 xl:px-40 flex flex-col xl:flex-row  gap-32 bg-[#263238] max-sm:relative">
+    <div className="w-full py-8 md:py-12 xl:py-16 px-10 md:px-30 xl:px-40 flex flex-col xl:flex-row gap-8 lg:16 xl:gap-32 bg-[#263238] max-sm:relative">
       {/* RightSide */}
       <div className=" w-1/3">
         <div className=" flex flex-col  gap-4 sm:gap-10">
           <a href="#">
-            {" "}
-            <img src={FooterLogo} alt="" className=" h-6 " />
+            <img src={FooterLogo} alt="" className="  object-fill " />
           </a>
 
-          <div className="max-sm:mx-auto">
+          <div className="max-sm:mx-auto flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <p className=" text-white">CopyRight &copy; 2020 Nexcent ltd.</p>
               <p className=" text-white">All rights reserved</p>
             </div>
-            <div className="flex gap-4  text-white">
+            <div className="flex gap-4 text-white">
               <a
                 className="w-8 h-8 bg-gray-600 flex items-center justify-center rounded-full"
                 href="instagram logo"
@@ -82,7 +81,7 @@ const FooterMain = () => {
         </div>
         {/* 3 */}
 
-        <div className="min-h-24 w-3xs flex flex-col items-center gap-6 max-sm:absolute max-sm:bottom-0 max-sm:left-5">
+        <div className="min-h-24 w-3xs flex flex-col gap-6 max-sm:absolute max-sm:bottom-0 max-sm:left-5">
           <h4 className="font-semibold text-xl leading-7 text-white">
             Stay up to date
           </h4>

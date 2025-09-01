@@ -1,9 +1,21 @@
-import React from "react";
+import { useEffect, useState } from "react";
+
 import Image1 from "../../assets/bodySectionPNGs/image1.png";
 import Image2 from "../../assets/bodySectionPNGs/image2.png";
 import Image3 from "../../assets/bodySectionPNGs/image3.png";
 
 const CommunityUpdates = () => {
+
+    const [posts, setPosts] = useState([]);
+
+  // ✅ Fetch posts from PHP API
+  useEffect(() => {
+    fetch("http://localhost/landingpage/bcommunityupdates.php")
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div
       id="Testimonial"
@@ -11,15 +23,30 @@ const CommunityUpdates = () => {
     >
       {/* Top */}
       <div className="p-2 flex flex-col w-full items-center gap-2">
-        <h2 className="w-full font-normal sm:font-semibold text-xl sm:text-2xl md:text-4xl leading-11 text-center text-grayHead">
+        {/* <h2 className="w-full font-normal sm:font-semibold text-xl sm:text-2xl md:text-4xl leading-11 text-center text-grayHead">
           Caring is the new marketing
-        </h2>
-        <p className="w-full lg:w-2/3 p-2 text-sm sm:text-base font-normal leading-4 sm:leading-6 text-center text-grayPara ">
+        </h2> */}
+              {posts.length === 0 ? (
+        <p>Enter a title and its desc...</p>
+      ) : (
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              {/* <h3>{post.title}</h3> */}
+              <h2 className="w-full font-normal sm:font-semibold text-xl sm:text-2xl md:text-4xl leading-11 text-center text-grayHead">{post.title}</h2>
+             
+              {/* <p>{post.description}</p> */}
+              <p className="mx-auto w-full lg:w-2/3 p-2 text-sm sm:text-base font-normal leading-4 sm:leading-6 text-center text-grayPara ">{post.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+        {/* <p className="w-full lg:w-2/3 p-2 text-sm sm:text-base font-normal leading-4 sm:leading-6 text-center text-grayPara ">
           The Nexcent blog is the best place to read about the latest membership
           insights, trends and more. See who's joining the community, read about
           how our community are increasing their membership income and lot's
           more.​
-        </p>
+        </p> */}
       </div>
 
       {/* Bottom*/}
